@@ -1,0 +1,77 @@
+    # Project definitions (do not edit)
+Task: caballos
+scorer: Carlos Mosquera
+date: Nov8
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: /Users/cmosquerat/caballos
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/393bf851-a76e-4d18-9b53-de2b389744ca.mp4:
+    crop: 0, 640, 0, 352
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/VID-20200521-WA0146.mp4:
+    crop: 0, 848, 0, 480
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/WhatsApp Video 2020-05-22 at 4.11.17 PM.mp4:
+    crop: 0, 640, 0, 352
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/WhatsApp Video 2020-05-20 at 8.11.51 AM.mp4:
+    crop: 0, 640, 0, 352
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/VID-20200524-WA0211.mp4:
+    crop: 0, 848, 0, 480
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/Chirivia_de_palmarito.mp4:
+    crop: 0, 640, 0, 352
+  /Users/cmosquerat/Desktop/Caballos-Orcas-2022-11-07/88f6f0c5-4532-4e57-9517-8c142d11ba43 (1).mp4:
+    crop: 0, 640, 0, 352
+bodyparts:
+- pdi
+- pdd
+- pti
+- ptd
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
